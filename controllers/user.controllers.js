@@ -14,6 +14,7 @@ exports.postData = async (req, res) => {
 exports.getData = async (req, res) => {
   try {
     const result = await Data.find();
+    console.log(result);
     res.status(200).json({ mssg: result });
   } catch (error) {
     res.status(500).send(error);
